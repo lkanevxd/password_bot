@@ -26,7 +26,7 @@ def passwords_markup(passwords):
     markup.add(btn1)
     if passwords:
         for pwd in passwords:
-            btn = InlineKeyboardButton(f"🔒 {pwd['url']}", callback_data=f"pwd_{pwd['id']}")
+            btn = InlineKeyboardButton(f"{pwd['url']}", callback_data=f"pwd_{pwd['id']}")
             markup.add(btn)
     else:
         btn = InlineKeyboardButton("нихуя нет", callback_data="empty")
